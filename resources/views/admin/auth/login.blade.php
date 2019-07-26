@@ -20,8 +20,13 @@
                     <form role="form" action="/admin/login" method="POST">
                         @csrf
                         <fieldset>
+                            @if($errors->any())
+                                <div class="alert alert-danger">
+                                        {{ $errors->first() }}
+                                </div>
+                            @endif
                             <div class="form-group">
-                                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
+                                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="" value="{{ old('email') }}">
                             </div>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password"

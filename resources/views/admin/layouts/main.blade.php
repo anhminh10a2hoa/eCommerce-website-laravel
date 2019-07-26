@@ -10,8 +10,8 @@
 	
 	<link href="/assets/admin/css/styles.css" rel="stylesheet">
 	<!--Icons-->
-	<script src="js/lumino.glyphs.js"></script>
-	<link rel="stylesheet" href="Awesome/css/all.css">
+	<script src="/assets/admin/js/lumino.glyphs.js"></script>
+	<link rel="stylesheet" href="/assets/admin/Awesome/css/all.css">
 </head>
 <body>
 	<!-- header -->
@@ -30,7 +30,7 @@
 	<script src="/assets/admin/js/bootstrap.min.js"></script>
 	<script src="/assets/admin/js/chart.min.js"></script>
 	<script src="/assets/admin/js/chart-data.js"></script>
-
+	@stack('js')
 </body>
 
 </html>
