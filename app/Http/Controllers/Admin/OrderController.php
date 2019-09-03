@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 class OrderController extends Controller
 {
     /**
@@ -14,9 +11,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.orders.index');
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +22,6 @@ class OrderController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -37,7 +32,6 @@ class OrderController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
@@ -48,7 +42,6 @@ class OrderController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -57,9 +50,8 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.orders.edit');
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -71,7 +63,6 @@ class OrderController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -81,5 +72,9 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function processed()
+    {
+        return view('admin.orders.processed');
     }
 }

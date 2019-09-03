@@ -10,19 +10,20 @@
 							<div class="row">
 								<div class="col-md-5">
 									<div class="product-entry">
-										<div class="product-img" style="background-image: url(images/ao-so-mi-trang-kem-asm836-8193.jpg);">
+										<div class="product-img"><img src=" {{ $products->avatar }}" alt="Áo đẹp"
+											width="100%" class="thumbnail">
 
 										</div>
 
 									</div>
 								</div>
 								<div class="col-md-7">
-									<form action="product/AddCart" method="post">
+									<form action="" method="post">
 
 										<div class="desc">
-											<h3>{{ $product->name }}</h3>
+											<h3>{{ $products->name }}</h3>
 											<p class="price">
-												{{-- <span>{{ number_format($product->price) }} đ</span> --}}
+												<span>{{ number_format($products->price) }} đ</span>
 											</p>
 											<p>thông tin</p>
 											<p style="text-align: justify;">
@@ -99,65 +100,6 @@
 							</div>
 							<div class="desc">
 								<h3><a href="detail.html">Quần kaki xanh đen</a></h3>
-								<p class="price"><span>3.000.000 đ</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(images/ao-so-mi-trang-kem-asm836-8193.jpg);">
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i
-													class="icon-shopping-cart"></i></a></span>
-										<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="detail.html">Áo trắng kẻ vằn</a></h3>
-								<p class="price"><span>3.000.000 đ</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(images/6ds19c007.jpg);">
-
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i
-													class="icon-shopping-cart"></i></a></span>
-										<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="detail.html">Áo nữ trắng bạch</a></h3>
-								<p class="price"><span>3.000.000 đ</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(images/ao-nu-so-mi-co-co-duc.jpg);">
-
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i
-													class="icon-shopping-cart"></i></a></span>
-										<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="detail.html">{{ $product['name'] }}</a></h3>
 								<p class="price"><span>3.000.000 đ</span></p>
 							</div>
 						</div>

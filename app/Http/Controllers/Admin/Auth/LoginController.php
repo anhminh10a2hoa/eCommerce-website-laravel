@@ -38,7 +38,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function showloginForm()
+    public function showLoginForm()
     {
         return view('admin.auth.login');
     }
@@ -54,3 +54,4 @@ class LoginController extends Controller
         return redirect('/admin/login');
     }
 }
+

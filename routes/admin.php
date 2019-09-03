@@ -12,17 +12,19 @@
 */
 
 // /admin
-Route::group(['middleware'=>'auth'], function(){
+
+Route::group(['middleware' => 'auth'], function() {
+
     Route::get('', [
         'as' => 'admin.dashboard.index',
         'uses' => 'DashboardController@index'
     ]);
-    
+
     Route::resource('products', 'ProductController', [
         'as' => 'admin',
         'parameters' => ['products' => 'id']
     ]);
-    
+
     Route::resource('users', 'UserController', [
         'as' => 'admin',
         'parameters' => ['users' => 'id']
@@ -40,7 +42,6 @@ Route::group(['middleware'=>'auth'], function(){
         'parameters' => ['orders' => 'id']
     ]);
 });
-
 
 
 Route::get('login', [

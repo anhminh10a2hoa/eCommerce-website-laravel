@@ -1,121 +1,6 @@
-<!DOCTYPE HTML>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>VIETPRO STORE</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/custome.css">
-
-
-
-</head>
-
-<body>
-	<!--header -->
-	<div class="colorlib-loader"></div>
-	<div id="page">
-		<nav class="colorlib-nav" role="navigation">
-			<div class="top-menu">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-2">
-							<div id="colorlib-logo"><a href="index.html"><img src="images/logo.png" alt="" style="width: 300px;height: 50px;"></a></div>
-						</div>
-						<div class="col-xs-10 text-right menu-1">
-							<ul>
-								<li class="active"><a href="index.html">Trang chủ</a></li>
-								<li class="has-dropdown">
-									<a href="shop.html">Cửa hàng</a>
-									<ul class="dropdown">
-										<li><a href="cart.html">Giỏ hàng</a></li>
-										<li><a href="checkout.html">Thanh toán</a></li>
-
-									</ul>
-								</li>
-								<li><a href="about.html">Giới thiệu</a></li>
-								<li><a href="contact.html">Liên hệ</a></li>
-								<li><a href="cart.html"><i class="icon-shopping-cart"></i> Giỏ hàng [0]</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-		<aside id="colorlib-hero">
-			<div class="flexslider">
-				<ul class="slides">
-					<li style="background-image: url(images/bg-03.jpg);">
-						<div class="overlay"></div>
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-md-6 col-md-offset-3 col-md-pull-2 col-sm-12 col-xs-12 slider-text">
-									<div class="slider-text-inner">
-										<div class="desc">
-											<h1 class="head-1">Sale</h1>
-											<h2 class="head-3">45%</h2>
-											<p class="category"><span>Nhưng mẫu thiết kế chuyên nghiệp</span></p>
-											<p><a href="#" class="btn btn-primary">Kết nối với shop</a></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(images/bg-01.jpg);">
-						<div class="overlay"></div>
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-md-6 col-md-offset-3 col-md-pull-2 col-sm-12 col-xs-12 slider-text">
-									<div class="slider-text-inner">
-										<div class="desc">
-											<h1 class="head-1">Sale</h1>
-											<h2 class="head-3">45%</h2>
-											<p class="category"><span>Nhưng mẫu thiết kế chuyên nghiệp</span></p>
-											<p><a href="#" class="btn btn-primary">Kết nối với shop</a></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li style="background-image: url(images/bg-02.jpg);">
-						<div class="overlay"></div>
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 slider-text">
-									<div class="slider-text-inner">
-										<div class="desc">
-											<h1 class="head-1">Sale</h1>
-											<h2 class="head-3">45%</h2>
-											<p class="category"><span>Nhưng mẫu thiết kế chuyên nghiệp</span></p>
-											<p><a href="#" class="btn btn-primary">Kết nối với shop</a></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</aside>
-		<!-- End header -->
+@extends('client.layouts.main')
+@section('title', 'Liên hệ')
+@section('content')
 		<!-- main -->
 		<div id="colorlib-contact">
 			<div class="container">
@@ -137,7 +22,7 @@
 										href="mailto:info@yoursite.com">info@yoursite.com</a></p>
 							</div>
 							<div class="col-md-3">
-								<p><span><i class="icon-globe"></i></span> <a href="#">http://vietpro.edu.vn</a></p>
+								<p><span><i class="icon-globe"></i></span> <a href="/">http://vietpro.edu.vn</a></p>
 							</div>
 						</div>
 					</div>
@@ -267,66 +152,36 @@
 							<li>Số nhà B8A ngõ 18 đường Võ Văn Dũng - Hoàng Cầu - Đống Đa - Hà Nội</li>
 							<li><a href="tel://1234567920">0988 550 553</a></li>
 							<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li><a href="#">http://vietpro.edu.vn</a></li>
+							<li><a href="/">http://vietpro.edu.vn</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 
-		</footer>
-		<!--end  footer -->
+@endsection
 
-		<!-- jQuery -->
-		<script src="js/jquery.min.js"></script>
-
-		<!-- Bootstrap -->
-		<script src="js/bootstrap.min.js"></script>
-		<!-- Waypoints -->
-		<script src="js/jquery.waypoints.min.js"></script>
-		<!-- Flexslider -->
-		<script src="js/jquery.flexslider-min.js"></script>
-
-		<!-- Magnific Popup -->
-		<script src="js/jquery.magnific-popup.min.js"></script>
-		
-
-	
-		<!-- Main -->
-		<script src="js/main.js"></script>
+@push('js')
 		<script>
 			$(document).ready(function () {
-
 				var quantitiy = 0;
 				$('.quantity-right-plus').click(function (e) {
-
 					// Stop acting like a button
 					e.preventDefault();
 					// Get the field name
 					var quantity = parseInt($('#quantity').val());
-
 					// If is not undefined
-
 					$('#quantity').val(quantity + 1);
-
-
 					// Increment
-
 				});
-
 				$('.quantity-left-minus').click(function (e) {
 					// Stop acting like a button
 					e.preventDefault();
 					// Get the field name
 					var quantity = parseInt($('#quantity').val());
-
 					if (quantity > 0) {
 						$('#quantity').val(quantity - 1);
 					}
 				});
-
 			});
 		</script>
-
-</body>
-
-</html>
+@endpush

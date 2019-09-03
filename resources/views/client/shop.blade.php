@@ -7,7 +7,7 @@
 				<div class="row">
 					<div class="col-md-9 col-md-push-3">
 
-
+						@dump(Cart::getContent())
 						<div class="row row-pb-lg">
 							@forelse ($products as $product)
 									<div class="col-md-4 text-center">
@@ -16,7 +16,9 @@
 									
 												<div class="cart">
 													<p>
-														<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span>
+														<span class="addtocart">
+															<a href="cart.html" data-id="{{ $product->id }}" class="btn-add-cart"><i class="icon-shopping-cart"></i></a>
+														</span>
 														<span><a href="/san-pham/{{ $product->id }}"><i class="icon-eye"></i></a></span>
 									
 									
@@ -34,258 +36,9 @@
 							@endforelse
 							
 						</div>
-
-						{{-- <div class="row row-pb-lg">
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/quan-kaki-do-man-qk162-8273.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Quần kaki đỏ man</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/quan-kaki-nauqk178-10366.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Quần kaki Nâu </a></h3>
-										<p class="price"><span>3.000.000 đ</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/quan-kaki-xam-chuot-dam-qk171-9770.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Quần kaki xám</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/quan-kaki-xanh-den-qk171-9771.jpg);">
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Quần kaki xanh đen</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/ao-so-mi-ca-ro-xam-xanh-asm1228-10199.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Áo sơ mi ca rô xám xanh</a></h3>
-										<p class="price"><span>3.000.000 đ</span> </p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/ao-so-mi-hoa-tiet-den-asm1223-10191.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Áo hoạ tiết đen</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/ao-so-mi-trang-kem-asm836-8193.jpg);">
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Áo trắng kẻ vằn</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/6ds19c007.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Áo nữ trắng bạch</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/ao-nu-so-mi-co-co-duc.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Áo sơ mi có cổ kẻ ô xám</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/dam_nu_xoe_dep.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Váy đầm xoè hoa nổi</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/Ao_nu_so_mi_cham_bi.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Áo nữ chấm bi</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 text-center">
-								<div class="product-entry">
-									<div class="product-img" style="background-image: url(/assets/client/images/ao-nu-phoi-vien.jpg);">
-
-										<div class="cart">
-											<p>
-												<span class="addtocart"><a href="cart.html"><i
-															class="icon-shopping-cart"></i></a></span>
-												<span><a href="detail.html"><i class="icon-eye"></i></a></span>
-
-
-											</p>
-										</div>
-									</div>
-									<div class="desc">
-										<h3><a href="detail.html">Áo nữ nổi viền</a></h3>
-										<p class="price"><span>3.000.000 đ</span></p>
-									</div>
-								</div>
-							</div>
-						</div> --}}
 						<div class="row">
 							<div class="col-md-12">
 								{{ $products->links() }}
-								{{-- <ul class="pagination">
-									<li class="disabled"><a href="#">&laquo;</a></li>
-									<li class="active"><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">&raquo;</a></li>
-								</ul> --}}
 							</div>
 						</div>
 					</div>
@@ -344,7 +97,7 @@
 							</div>
 							<div class="side">
 								<h2>Khoảng giá</h2>
-								<form method="post" class="colorlib-form-2">
+								<form method="get" class="colorlib-form-2" action="">
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
@@ -352,11 +105,13 @@
 												<div class="form-field">
 													<i class="icon icon-arrow-down3"></i>
 													<select name="start" id="people" class="form-control">
-														<option value="#">100.000 VNĐ</option>
-														<option value="#">200.000 VNĐ</option>
-														<option value="#">300.000 VNĐ</option>
-														<option value="#">500.000 VNĐ</option>
-														<option value="#">1.000.000 VNĐ</option>
+														<option value>-- Select an option --</option>
+														
+														<option {{ $start===100000?'selected':'' }} value="100000">100.000 VNĐ</option>
+														<option {{ $start===200000?'selected':'' }} value="200000">200.000 VNĐ</option>
+														<option {{ $start===300000?'selected':'' }} value="300000">300.000 VNĐ</option>
+														<option {{ $start===500000?'selected':'' }} value="500000">500.000 VNĐ</option>
+														<option {{ $start===1000000?'selected':'' }} value="1000000">1.000.000 VNĐ</option>
 													</select>
 												</div>
 											</div>
@@ -367,11 +122,12 @@
 												<div class="form-field">
 													<i class="icon icon-arrow-down3"></i>
 													<select name="end" id="people" class="form-control">
-														<option value="#">2.000.000 VNĐ</option>
-														<option value="#">4.000.000 VNĐ</option>
-														<option value="#">6.000.000 VNĐ</option>
-														<option value="#">8.000.000 VNĐ</option>
-														<option value="#">10.000.000 VNĐ</option>
+														<option value>-- Select an option --</option>
+														<option {{ $end==2000000?'selected':'' }} value="2000000">2.000.000 VNĐ</option>
+														<option {{ $end==4000000?'selected':'' }} value="4000000">4.000.000 VNĐ</option>
+														<option {{ $end==6000000?'selected':'' }} value="6000000">6.000.000 VNĐ</option>
+														<option {{ $end==8000000?'selected':'' }} value="8000000">8.000.000 VNĐ</option>
+														<option {{ $end==10000000?'selected':'' }} value="10000000">10.000.000 VNĐ</option>
 													</select>
 												</div>
 											</div>
@@ -389,3 +145,32 @@
 		</div>
 		<!-- end main -->
 @endsection
+
+@push('js')
+<script>
+$(document).ready(function() {
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});
+	
+	$('.btn-add-cart').click(function(e) {
+		e.preventDefault();
+		let data = {
+			id: $(this).attr('data-id'),
+			quantity: 1,
+		};
+		$.ajax({
+			url: '/gio-hang/add',
+			method: 'POST',
+			data: data,
+			success: function() {
+			},
+			error: function() {
+			}
+		});
+	});
+});
+</script>
+@endpush

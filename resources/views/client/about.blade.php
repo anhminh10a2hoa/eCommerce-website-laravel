@@ -63,7 +63,7 @@
 
 									<div class="row row-pb-sm">
 										<div class="col-md-6">
-											<img class="img-responsive" src="images/be-giang-Android-K45-1.jpg" alt="" style="height: 360px;">
+											<img class="img-responsive" src="/assets/client/images/be-giang-Android-K45-1.jpg" alt="" style="height: 360px;">
 										</div>
 										<div class="col-md-6">
 											<p>Học viện Công nghệ Vietpro chính thức thành lập vào ngày 06/05/2009, tuy
